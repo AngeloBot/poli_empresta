@@ -9,8 +9,8 @@
       <th>Id owner</th>
       <th>Returned</th>
       <th>Accepted</th>
-      <th>Date start</th>
-      <th>Date end</th>
+      <th>Start</th>
+      <th>End</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,8 +22,8 @@
         <td><%= loan.id_owner %></td>
         <td><%= loan.returned %></td>
         <td><%= loan.accepted %></td>
-        <td><%= loan.date_start %></td>
-        <td><%= loan.date_end %></td>
+        <td><%= loan.start %></td>
+        <td><%= loan.end %></td>
         <td><%= link_to 'Show', loan %></td>
         <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
         <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -3,15 +3,15 @@
 one:
   id_borrower: 1
   id_owner: 1
-  returned: 
-  accepted: 
-  date_start: 2019-11-22
-  date_end: 2019-11-22
+  returned: false
+  accepted: false
+  start: 2019-11-23
+  end: 2019-11-23
 
 two:
   id_borrower: 1
   id_owner: 1
-  returned: 
-  accepted: 
-  date_start: 2019-11-22
-  date_end: 2019-11-22
+  returned: false
+  accepted: false
+  start: 2019-11-23
+  end: 2019-11-23

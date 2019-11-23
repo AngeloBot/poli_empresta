@@ -1,11 +1,10 @@
 class CreateTools < ActiveRecord::Migration[5.1]
   def change
     create_table :tools do |t|
-      t.string :name
-      t.integer :year
+      t.integer :quantity
       t.text :description
-      t.decimal :price
-      t.integer :student_id
+      t.string :name
+      t.string :photo
 
       t.timestamps
     end

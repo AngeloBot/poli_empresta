@@ -23,22 +23,22 @@
 
   <div class="field">
     <%= form.label :returned %>
-    <%= form.text_field :returned, id: :loan_returned %>
+    <%= form.check_box :returned, id: :loan_returned %>
   </div>
 
   <div class="field">
     <%= form.label :accepted %>
-    <%= form.text_field :accepted, id: :loan_accepted %>
+    <%= form.check_box :accepted, id: :loan_accepted %>
   </div>
 
   <div class="field">
-    <%= form.label :date_start %>
-    <%= form.date_select :date_start, id: :loan_date_start %>
+    <%= form.label :start %>
+    <%= form.date_select :start, id: :loan_start %>
   </div>
 
   <div class="field">
-    <%= form.label :date_end %>
-    <%= form.date_select :date_end, id: :loan_date_end %>
+    <%= form.label :end %>
+    <%= form.date_select :end, id: :loan_end %>
   </div>
 
   <div class="actions">

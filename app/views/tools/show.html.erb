@@ -1,13 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @tool.name %>
-</p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @tool.year %>
+  <strong>Quantity:</strong>
+  <%= @tool.quantity %>
 </p>
 
 <p>
@@ -16,19 +11,14 @@
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @tool.price %>
+  <strong>Name:</strong>
+  <%= @tool.name %>
 </p>
 
 <p>
-  <strong>Student:</strong>
-  <%#= @tool.student_id %>
-  <%#= @tool.student.given_name %><%#= @tool.student.family_name %>
-  <%= @tool.student.name %>
+  <strong>Photo:</strong>
+  <%= @tool.photo %>
 </p>
 
-<%#= link_to 'Edit', edit_tool_path(@tool) %> |
-<%#= link_to 'Back', tools_path %>
-
-<%= link_to 'Edit', edit_student_tool_path(@student, @tool) %> |
-<%= link_to 'Back', student_tools_path(@student) %>
+<%= link_to 'Edit', edit_tool_path(@tool) %> |
+<%= link_to 'Back', tools_path %>

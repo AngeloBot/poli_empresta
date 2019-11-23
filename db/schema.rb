@@ -10,23 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191102194155) do
+ActiveRecord::Schema.define(version: 20191123205650) do
+
+  create_table "loans", force: :cascade do |t|
+    t.integer "id_borrower"
+    t.integer "id_owner"
+    t.boolean "returned"
+    t.boolean "accepted"
+    t.date "start"
+    t.date "end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "students", force: :cascade do |t|
-    t.string "given_name"
-    t.string "family_name"
-    t.string "cpf"
-    t.date "date_of_birth"
+    t.boolean "admin"
+    t.string "name"
+    t.string "email"
+    t.string "password"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tools", force: :cascade do |t|
-    t.string "name"
-    t.integer "year"
+    t.integer "quantity"
     t.text "description"
-    t.decimal "price"
-    t.integer "student_id"
+    t.string "name"
+    t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

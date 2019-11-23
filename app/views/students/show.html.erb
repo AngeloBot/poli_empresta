@@ -1,36 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Given name:</strong>
-  <%= @student.given_name %>
+  <strong>Admin:</strong>
+  <%= @student.admin %>
 </p>
 
 <p>
-  <strong>Family name:</strong>
-  <%= @student.family_name %>
+  <strong>Name:</strong>
+  <%= @student.name %>
 </p>
 
 <p>
-  <strong>Cpf:</strong>
-  <%= @student.cpf %>
+  <strong>Email:</strong>
+  <%= @student.email %>
 </p>
 
 <p>
-  <strong>Date of birth:</strong>
-  <%= @student.date_of_birth %>
+  <strong>Password:</strong>
+  <%= @student.password %>
 </p>
 
-<h3>Tools</h3><table><tr>
-<th>Name</th><th>Year</th><th>Student</th><th>Description</th>
-<% @student.tools.each do |tool| %>
-<tr>
-	<td><%= tool.name %></td>
-	<td><%= tool.year %></td>
-	<td><%= tool.student.name %></td>
-	<td><%= tool.description %></td>
-</tr><% end %>
-</table>
+<p>
+  <strong>Photo:</strong>
+  <%= @student.photo %>
+</p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Tools', student_tools_path(@student) %> |
 <%= link_to 'Back', students_path %>
