@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :item_tools
+  resources :users
+  resources :loans
+  resources :teams
   resources :students do
   	resources :tools
   end

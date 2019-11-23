@@ -1,0 +1,2 @@
+class ItemTool < ApplicationRecord
+end
