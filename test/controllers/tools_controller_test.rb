@@ -17,7 +17,7 @@ class ToolsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create tool" do
     assert_difference('Tool.count') do
-      post tools_url, params: { tool: { description: @tool.description, name: @tool.name, photo: @tool.photo, quantity: @tool.quantity } }
+      post tools_url, params: { tool: { description: @tool.description, name: @tool.name, photo: @tool.photo, quantity: @tool.quantity, team_id: @tool.team_id } }
     end
 
     assert_redirected_to tool_url(Tool.last)
@@ -34,7 +34,7 @@ class ToolsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update tool" do
-    patch tool_url(@tool), params: { tool: { description: @tool.description, name: @tool.name, photo: @tool.photo, quantity: @tool.quantity } }
+    patch tool_url(@tool), params: { tool: { description: @tool.description, name: @tool.name, photo: @tool.photo, quantity: @tool.quantity, team_id: @tool.team_id } }
     assert_redirected_to tool_url(@tool)
   end
 

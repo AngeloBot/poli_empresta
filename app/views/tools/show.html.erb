@@ -20,5 +20,10 @@
   <%= @tool.photo %>
 </p>
 
-<%= link_to 'Edit', edit_tool_path(@tool) %> |
-<%= link_to 'Back', tools_path %>
+<p>
+  <strong>Team:</strong>
+  <%= @tool.team.name %>
+</p>
+
+<%= link_to 'Edit', edit_team_tool_path(@tool) %> |
+<%= link_to 'Back', team_tools_path %>

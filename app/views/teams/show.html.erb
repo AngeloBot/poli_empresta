@@ -1,19 +1,35 @@
 <p id="notice"><%= notice %></p>
+<%= @team.photo %>
 
-<p>
+<p id="nomequipe">
   <strong>Name:</strong>
   <%= @team.name %>
 </p>
 
-<p>
+<p id="descricaoequipe">
   <strong>Description:</strong>
   <%= @team.description %>
 </p>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @team.photo %>
-</p>
+<h3>Ferramentas</h3><%= link_to 'Editar ferramentas', team_tools_path(@team) %>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Description</th>
+  </tr>
+  <% @team.tools.each do |tool| %>
+    <tr>
+      <td><%= tool.photo %></td>
+      <td><%= tool.name %></td>
+      <td><%= tool.quantity %></td>
+      <td><%= tool.description %></td>
+    </tr>
+  <% end %>
+</table>
+
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
