@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Item Tools</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Loan</th>
+      <th>Tool quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @item_tools.each do |item_tool| %>
+      <tr>
+        <td><%= item_tool.tool_id %></td>
+        <td><%= item_tool.loan_id %></td>
+        <td><%= item_tool.tool_quantity %></td>
+        <td><%= link_to 'Show', item_tool %></td>
+        <td><%= link_to 'Edit', edit_item_tool_path(item_tool) %></td>
+        <td><%= link_to 'Destroy', item_tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item Tool', new_item_tool_path %>

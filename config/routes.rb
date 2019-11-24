@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :item_tools
   resources :students
   resources :loans
   resources :teams do

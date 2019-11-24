@@ -1,0 +1,32 @@
+<%= form_with(model: item_tool, local: true) do |form| %>
+  <% if item_tool.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item_tool.errors.count, "error") %> prohibited this item_tool from being saved:</h2>
+
+      <ul>
+      <% item_tool.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tool_id %>
+    <%= form.number_field :tool_id, id: :item_tool_tool_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loan_id %>
+    <%= form.number_field :loan_id, id: :item_tool_loan_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tool_quantity %>
+    <%= form.number_field :tool_quantity, id: :item_tool_tool_quantity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

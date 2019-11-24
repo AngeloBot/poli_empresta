@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tool:</strong>
+  <%= @item_tool.tool_id %>
+</p>
+
+<p>
+  <strong>Loan:</strong>
+  <%= @item_tool.loan_id %>
+</p>
+
+<p>
+  <strong>Tool quantity:</strong>
+  <%= @item_tool.tool_quantity %>
+</p>
+
+<%= link_to 'Edit', edit_item_tool_path(@item_tool) %> |
+<%= link_to 'Back', item_tools_path %>
