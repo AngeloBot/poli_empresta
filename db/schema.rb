@@ -10,32 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191124002618) do
+ActiveRecord::Schema.define(version: 20191124004327) do
 
-  create_table "item_tools", force: :cascade do |t|
-    t.integer "tool_id"
-    t.integer "loan_id"
+  create_table "loans", force: :cascade do |t|
+    t.integer "owner_id"
+    t.integer "borrower_id"
+    t.date "start"
+    t.date "end"
+    t.boolean "returned"
+    t.boolean "accepted"
     t.integer "tool_quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "loans", force: :cascade do |t|
-    t.integer "id_borrower"
-    t.integer "id_owner"
-    t.boolean "returned"
-    t.boolean "accepted"
-    t.date "start"
-    t.date "end"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "loans_tools", force: :cascade do |t|
-    t.integer "loan_id", null: false
-    t.integer "tool_id", null: false
-    t.integer "tool_quantity", null: false
-    t.index ["loan_id", "tool_id", "tool_quantity"], name: "index_loans_tools_on_loan_id_and_tool_id_and_tool_quantity", unique: true
   end
 
   create_table "students", force: :cascade do |t|

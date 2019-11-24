@@ -1,17 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id_borrower: 1
-  id_owner: 1
-  returned: false
-  accepted: false
+  owner_id: 1
+  borrower_id: 1
   start: 2019-11-23
   end: 2019-11-23
+  returned: false
+  accepted: false
+  tool_quantity: 1
 
 two:
-  id_borrower: 1
-  id_owner: 1
-  returned: false
-  accepted: false
+  owner_id: 1
+  borrower_id: 1
   start: 2019-11-23
   end: 2019-11-23
+  returned: false
+  accepted: false
+  tool_quantity: 1

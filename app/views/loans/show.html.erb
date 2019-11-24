@@ -1,13 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Id borrower:</strong>
-  <%= @loan.id_borrower %>
+  <strong>Owner:</strong>
+  <%= @loan.owner_id %>
 </p>
 
 <p>
-  <strong>Id owner:</strong>
-  <%= @loan.id_owner %>
+  <strong>Borrower:</strong>
+  <%= @loan.borrower_id %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @loan.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @loan.end %>
 </p>
 
 <p>
@@ -21,13 +31,8 @@
 </p>
 
 <p>
-  <strong>Start:</strong>
-  <%= @loan.start %>
-</p>
-
-<p>
-  <strong>End:</strong>
-  <%= @loan.end %>
+  <strong>Tool quantity:</strong>
+  <%= @loan.tool_quantity %>
 </p>
 
 <%= link_to 'Edit', edit_loan_path(@loan) %> |

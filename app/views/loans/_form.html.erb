@@ -12,13 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :id_borrower %>
-    <%= form.number_field :id_borrower, id: :loan_id_borrower %>
+    <%= form.label :owner_id %>
+    <%= form.number_field :owner_id, id: :loan_owner_id %>
   </div>
 
   <div class="field">
-    <%= form.label :id_owner %>
-    <%= form.number_field :id_owner, id: :loan_id_owner %>
+    <%= form.label :borrower_id %>
+    <%= form.number_field :borrower_id, id: :loan_borrower_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start %>
+    <%= form.date_select :start, id: :loan_start %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end %>
+    <%= form.date_select :end, id: :loan_end %>
   </div>
 
   <div class="field">
@@ -32,13 +42,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :start %>
-    <%= form.date_select :start, id: :loan_start %>
-  </div>
-
-  <div class="field">
-    <%= form.label :end %>
-    <%= form.date_select :end, id: :loan_end %>
+    <%= form.label :tool_quantity %>
+    <%= form.number_field :tool_quantity, id: :loan_tool_quantity %>
   </div>
 
   <div class="actions">
