@@ -8,6 +8,7 @@ class CreateLoans < ActiveRecord::Migration[5.1]
       t.boolean :returned
       t.boolean :accepted
       t.integer :tool_quantity
+      t.integer :tool_id
 
       t.timestamps
     end

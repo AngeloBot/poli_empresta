@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191124004327) do
+ActiveRecord::Schema.define(version: 20191124010253) do
 
   create_table "loans", force: :cascade do |t|
     t.integer "owner_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20191124004327) do
     t.boolean "returned"
     t.boolean "accepted"
     t.integer "tool_quantity"
+    t.integer "tool_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

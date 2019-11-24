@@ -12,6 +12,7 @@
       <th>Returned</th>
       <th>Accepted</th>
       <th>Tool quantity</th>
+      <th>Tool</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +27,7 @@
         <td><%= loan.returned %></td>
         <td><%= loan.accepted %></td>
         <td><%= loan.tool_quantity %></td>
+        <td><%= loan.tool_id %></td>
         <td><%= link_to 'Show', loan %></td>
         <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
         <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>

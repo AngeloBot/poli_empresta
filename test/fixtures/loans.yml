@@ -8,6 +8,7 @@ one:
   returned: false
   accepted: false
   tool_quantity: 1
+  tool_id: 1
 
 two:
   owner_id: 1
@@ -17,3 +18,4 @@ two:
   returned: false
   accepted: false
   tool_quantity: 1
+  tool_id: 1
