@@ -64,6 +64,10 @@ class LoansController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def get_tool
+      @tool = Tool.find(params[:tool_id])
+    end
+
     def set_loan
       @loan = @tool.loans.find(params[:id])
     end
