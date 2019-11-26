@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :students
   resources :loans
   get '/teams/:id/remove_member', to: 'teams#remove_member'
+  get '/teams/:id/remove_tool', to: 'teams#remove_tool'
+
   resources :teams do
     get :remove_member
   end
