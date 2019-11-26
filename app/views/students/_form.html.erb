@@ -12,23 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :given_name %>
-    <%= form.text_field :given_name, id: :student_given_name %>
+    <%= form.label :admin %>
+    <%= form.check_box :admin, id: :student_admin %>
   </div>
 
   <div class="field">
-    <%= form.label :family_name %>
-    <%= form.text_field :family_name, id: :student_family_name %>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :student_name %>
   </div>
 
   <div class="field">
-    <%= form.label :cpf %>
-    <%= form.text_field :cpf, id: :student_cpf %>
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :student_email %>
   </div>
 
   <div class="field">
-    <%= form.label :date_of_birth %>
-    <%= form.date_select :date_of_birth, id: :student_date_of_birth %>
+    <%= form.label :password_digest %>
+    <%= form.text_field :password_digest, id: :student_password_digest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.text_field :photo, id: :student_photo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_id %>
+    <%= form.number_field :team_id, id: :student_team_id %>
   </div>
 
   <div class="actions">

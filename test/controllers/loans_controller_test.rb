@@ -17,7 +17,7 @@ class LoansControllerTest < ActionDispatch::IntegrationTest
 
   test "should create loan" do
     assert_difference('Loan.count') do
-      post loans_url, params: { loan: { accepted: @loan.accepted, date_end: @loan.date_end, date_start: @loan.date_start, id_borrower: @loan.id_borrower, id_owner: @loan.id_owner, returned: @loan.returned } }
+      post loans_url, params: { loan: { accepted: @loan.accepted, borrower_id: @loan.borrower_id, end: @loan.end, owner_id: @loan.owner_id, returned: @loan.returned, start: @loan.start, tool_id: @loan.tool_id, tool_quantity: @loan.tool_quantity } }
     end
 
     assert_redirected_to loan_url(Loan.last)
@@ -34,7 +34,7 @@ class LoansControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update loan" do
-    patch loan_url(@loan), params: { loan: { accepted: @loan.accepted, date_end: @loan.date_end, date_start: @loan.date_start, id_borrower: @loan.id_borrower, id_owner: @loan.id_owner, returned: @loan.returned } }
+    patch loan_url(@loan), params: { loan: { accepted: @loan.accepted, borrower_id: @loan.borrower_id, end: @loan.end, owner_id: @loan.owner_id, returned: @loan.returned, start: @loan.start, tool_id: @loan.tool_id, tool_quantity: @loan.tool_quantity } }
     assert_redirected_to loan_url(@loan)
   end
 

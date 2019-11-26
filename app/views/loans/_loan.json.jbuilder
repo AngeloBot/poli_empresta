@@ -1,2 +1,2 @@
-json.extract! loan, :id, :id_borrower, :id_owner, :returned, :accepted, :date_start, :date_end, :created_at, :updated_at
+json.extract! loan, :id, :borrower_id, :owner_id, :returned, :accepted, :start, :end, :tool_quantity, :tool_id, :created_at, :updated_at
 json.url loan_url(loan, format: :json)

@@ -10,13 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191102194155) do
+ActiveRecord::Schema.define(version: 20191126204724) do
+
+  create_table "item_tools", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "loans", force: :cascade do |t|
+    t.integer "borrower_id"
+    t.integer "owner_id"
+    t.boolean "returned"
+    t.boolean "accepted"
+    t.date "start"
+    t.date "end"
+    t.integer "tool_quantity"
+    t.integer "tool_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "students", force: :cascade do |t|
-    t.string "given_name"
-    t.string "family_name"
-    t.string "cpf"
-    t.date "date_of_birth"
+    t.boolean "admin"
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.string "photo"
+    t.integer "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
