@@ -1,16 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Quantity:</strong>
-  <%= @tool.quantity %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @tool.description %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @tool.name %>
 </p>
@@ -21,9 +11,20 @@
 </p>
 
 <p>
-  <strong>Team:</strong>
-  <%= @tool.team.name %>
+  <strong>Description:</strong>
+  <%= @tool.description %>
 </p>
 
-<%= link_to 'Edit', edit_team_tool_path(@tool) %> |
-<%= link_to 'Back', team_tools_path %>
+<p>
+  <strong>Team:</strong>
+  <%= Team.find(@tool.team_id).name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @tool.quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_tool_path(@tool) %> |
+<%= link_to 'Back', tools_path %>

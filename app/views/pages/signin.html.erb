@@ -1,0 +1,8 @@
+<h1>Hello <%= @name %></h1>
+  <%= form_tag :action => 'signin' do %>
+    <p>Enter your id:
+      <%= text_field_tag 'id_usuario', @id %></p>
+      <%= submit_tag 'Sign in' %>
+  <% end %>
+
+<%= link_to 'Homepage', pages_homepage_path %>

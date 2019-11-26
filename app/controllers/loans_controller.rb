@@ -1,11 +1,10 @@
 class LoansController < ApplicationController
-  before_action :get_tool
   before_action :set_loan, only: [:show, :edit, :update, :destroy]
 
   # GET /loans
   # GET /loans.json
   def index
-    @loans = @tool.loans.all
+    @loans = Loan.all
   end
 
   # GET /loans/1
@@ -15,7 +14,7 @@ class LoansController < ApplicationController
 
   # GET /loans/new
   def new
-    @loan = @tool.loans.build
+    @loan = Loan.new
   end
 
   # GET /loans/1/edit
@@ -25,11 +24,11 @@ class LoansController < ApplicationController
   # POST /loans
   # POST /loans.json
   def create
-    @loan = @tool.loans.build(loan_params)
+    @loan = Loan.new(loan_params)
 
     respond_to do |format|
       if @loan.save
-        format.html { redirect_to tool_loans_url(@loan), notice: 'Loan was successfully created.' }
+        format.html { redirect_to @loan, notice: 'Loan was successfully created.' }
         format.json { render :show, status: :created, location: @loan }
       else
         format.html { render :new }
@@ -43,7 +42,7 @@ class LoansController < ApplicationController
   def update
     respond_to do |format|
       if @loan.update(loan_params)
-        format.html { redirect_to tool_loans_url(@loan), notice: 'Loan was successfully updated.' }
+        format.html { redirect_to @loan, notice: 'Loan was successfully updated.' }
         format.json { render :show, status: :ok, location: @loan }
       else
         format.html { render :edit }
@@ -64,12 +63,8 @@ class LoansController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def get_tool
-      @tool = Tool.find(params[:tool_id])
-    end
-
     def set_loan
-      @loan = @tool.loans.find(params[:id])
+      @loan = Loan.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

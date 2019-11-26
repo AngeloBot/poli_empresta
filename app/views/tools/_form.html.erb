@@ -1,4 +1,4 @@
-<%= form_for([@team, tool]) do |form| %>
+<%= form_with(model: tool, local: true) do |form| %>
   <% if tool.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(tool.errors.count, "error") %> prohibited this tool from being saved:</h2>
@@ -32,8 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :team_id %><br/>
-    <%= form.select :team_id, Team.all.order(:name).collect{|s|[s.name, s.id]} %>
+    <%= form.label :team_id %>
+    <%= form.number_field :team_id, id: :tool_team_id %>
   </div>
 
   <div class="actions">

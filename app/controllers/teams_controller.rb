@@ -21,6 +21,11 @@ class TeamsController < ApplicationController
   def edit
   end
 
+  def remove_member
+    @team = Team.find(params[:id])
+    @students = Student.where(team_id: @team.id)
+  end
+
   # POST /teams
   # POST /teams.json
   def create

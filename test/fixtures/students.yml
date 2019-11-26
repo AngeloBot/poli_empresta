@@ -4,12 +4,14 @@ one:
   admin: false
   name: MyString
   email: MyString
-  password: MyString
+  password_digest: MyString
   photo: MyString
+  team_id: 1
 
 two:
   admin: false
   name: MyString
   email: MyString
-  password: MyString
+  password_digest: MyString
   photo: MyString
+  team_id: 1

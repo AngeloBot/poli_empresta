@@ -1,29 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Admin:</strong>
-  <%= @student.admin %>
-</p>
+<h1 id="studentname">
+  <p>
+    <%= @student.name %>
+  </p>
+</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @student.name %>
-</p>
+<h2 id="photo">
+  <p>
+    <%= @student.photo %>
+  </p>
+</h2>
 
-<p>
-  <strong>Email:</strong>
-  <%= @student.email %>
-</p>
+<h3 id="infos">
+  <p>
+    <strong>Qualificação:</strong>
+    <% if @student.admin %>
+      Administrador
+    <% else %>
+      Membro
+    <% end %>
+  </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @student.password %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @student.email %>
+  </p>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @student.photo %>
-</p>
+  <p>
+    <strong>Team:</strong>
+    <%= Team.all.find(@student.team_id).name %>
+  </p>
+</h3>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>

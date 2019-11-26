@@ -10,6 +10,8 @@ class StudentsController < ApplicationController
   # GET /students/1
   # GET /students/1.json
   def show
+    @user_id = session[:user_id]
+    @team_id = Student.find(@user_id).team_id
   end
 
   # GET /students/new
@@ -69,6 +71,6 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:admin, :name, :email, :password, :photo)
+      params.require(:student).permit(:admin, :name, :email, :password_digest, :photo, :team_id)
     end
 end

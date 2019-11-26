@@ -1,6 +1,5 @@
-<h1>Editing Team</h1>
+<h1>Editar <%= @team.name %></h1>
 
-<%= render 'form', team: @team %>
-
+<%= link_to 'Remover Membro', team_remove_member_path(@team) %>
 <%= link_to 'Show', @team %> |
-<%= link_to 'Back', teams_path %>
+<%= link_to 'Voltar', teams_path %>

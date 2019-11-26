@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Ferramentas da equipe <%= @team.name %></h1>
+<h1>Tools</h1>
 
-<% unless @team.tools.empty? %>
 <table>
   <thead>
     <tr>
@@ -22,10 +21,10 @@
         <td><%= tool.description %></td>
         <td><%= tool.name %></td>
         <td><%= tool.photo %></td>
-        <td><%= tool.team.name %></td>
-        <td><%= link_to 'Show', [@team, tool] %></td>
-        <td><%= link_to 'Edit', edit_team_tool_path(@team, tool) %></td>
-        <td><%= link_to 'Destroy', [@team, tool], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= tool.team_id %></td>
+        <td><%= link_to 'Show', tool %></td>
+        <td><%= link_to 'Edit', edit_tool_path(tool) %></td>
+        <td><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,11 +32,4 @@
 
 <br>
 
-<% else %>
-  <p>
-    <%= @team.name %> não possui ferramentas.
-  </p>
-<% end %>
-
-<%= link_to 'New Tool', new_team_tool_path(@team) %>
-<%= link_to 'Back', @team %>
+<%= link_to 'New Tool', new_tool_path %>

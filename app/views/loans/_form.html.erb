@@ -47,8 +47,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :tool_id %><br/>
-    <%= form.select :tool_id, Tool.all.order(:id).collect{|t|[t.id]} %>
+    <%= form.label :tool_id %>
+    <%= form.number_field :tool_id, id: :loan_tool_id %>
   </div>
 
   <div class="actions">
