@@ -1,10 +1,11 @@
 class ToolsController < ApplicationController
+  before_action :get_team
   before_action :set_tool, only: [:show, :edit, :update, :destroy]
 
   # GET /tools
   # GET /tools.json
   def index
-    @tools = Tool.all
+    @tools = @team.tools
   end
 
   # GET /tools/1
@@ -14,7 +15,7 @@ class ToolsController < ApplicationController
 
   # GET /tools/new
   def new
-    @tool = Tool.new
+    @tool = @team.tools.build
   end
 
   # GET /tools/1/edit
@@ -28,7 +29,7 @@ class ToolsController < ApplicationController
 
     respond_to do |format|
       if @tool.save
-        format.html { redirect_to @tool, notice: 'Tool was successfully created.' }
+        format.html { redirect_to team_tools_url, notice: 'Tool was successfully created.' }
         format.json { render :show, status: :created, location: @tool }
       else
         format.html { render :new }
@@ -56,15 +57,19 @@ class ToolsController < ApplicationController
   def destroy
     @tool.destroy
     respond_to do |format|
-      format.html { redirect_to tools_url, notice: 'Tool was successfully destroyed.' }
+      format.html { redirect_to team_tools_url, notice: 'Tool was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def get_team
+      @team = Team.find(params[:team_id])
+    end
+
     def set_tool
-      @tool = Tool.find(params[:id])
+      @tool = @team.tools.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

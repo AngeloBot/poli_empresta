@@ -22,7 +22,7 @@
         <td><%= tool.name %></td>
         <td><%= tool.photo %></td>
         <td><%= tool.team_id %></td>
-        <td><%= link_to 'Show', tool %></td>
+        <td><%= link_to 'Show', [@team,tool] %></td>
         <td><%= link_to 'Edit', edit_tool_path(tool) %></td>
         <td><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Tool', new_tool_path %>
+<%= link_to 'New Tool', new_team_tool_path %>

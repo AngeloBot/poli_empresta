@@ -31,6 +31,9 @@ class TeamsController < ApplicationController
     @tools = Tool.where(team_id: @team.id)
   end
 
+  def add_tool
+    @team = Team.find(params[:id])
+  end
   # POST /teams
   # POST /teams.json
   def create

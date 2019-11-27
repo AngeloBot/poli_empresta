@@ -32,11 +32,13 @@
   </div>
 
   <div class="field">
-  <%= form.label :team_id %><br/>
-  <%= form.select :team_id, Team.all.collect{|s|[s.id]} %>
+    <%= form.label :team_id %>
+    <%= form.number_field :team_id, id: :tool_team_id %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+<% @tool = Tool.create({name: :name, description: :description, quantity: :quantity, team_id: @team.id, photo: 'string'}) %>
