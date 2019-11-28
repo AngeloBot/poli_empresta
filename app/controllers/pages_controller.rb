@@ -8,4 +8,9 @@ class PagesController < ApplicationController
     @user_id = session[:user_id]
     @team_id = Student.find(@user_id).team_id
   end
+
+  def search
+    @teams = Team.search(params[:search])
+    @tools = Tool.search(params[:search])
+  end
 end

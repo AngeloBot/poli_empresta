@@ -25,7 +25,7 @@ class ToolsController < ApplicationController
   # POST /tools
   # POST /tools.json
   def create
-    @tool = Tool.new(tool_params)
+    @tool = @team.tools.build(tool_params)
 
     respond_to do |format|
       if @tool.save
@@ -43,7 +43,7 @@ class ToolsController < ApplicationController
   def update
     respond_to do |format|
       if @tool.update(tool_params)
-        format.html { redirect_to @tool, notice: 'Tool was successfully updated.' }
+        format.html { redirect_to team_tools_url, notice: 'Tool was successfully updated.' }
         format.json { render :show, status: :ok, location: @tool }
       else
         format.html { render :edit }

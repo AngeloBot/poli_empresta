@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+
 <h1>Teams</h1>
 
 <table>
@@ -27,5 +28,12 @@
 </table>
 
 <br>
+
+<%= form_tag teams_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
 
 <%= link_to 'New Team', new_team_path %>

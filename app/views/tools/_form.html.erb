@@ -1,4 +1,4 @@
-<%= form_with(model: tool, local: true) do |form| %>
+<%= form_for([@team, tool]) do |form| %>
   <% if tool.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(tool.errors.count, "error") %> prohibited this tool from being saved:</h2>
@@ -22,13 +22,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :tool_name %>
+    <%= form.label :photo %>
+    <%= form.text_field :photo, id: :tool_photo %>
   </div>
 
   <div class="field">
-    <%= form.label :photo %>
-    <%= form.text_field :photo, id: :tool_photo %>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :tool_name %>
   </div>
 
   <div class="field">
