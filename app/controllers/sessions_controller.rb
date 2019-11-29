@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def new
   end
+<<<<<<< Updated upstream
 
   def create
     user = User.find_by_email(params[:email])
@@ -18,4 +19,6 @@ class SessionsController < ApplicationController
     redirect_to root_url, notice: "Logged out!"
   end
 
+=======
+>>>>>>> Stashed changes
 end
