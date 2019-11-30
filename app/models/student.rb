@@ -5,9 +5,6 @@ class Student < ApplicationRecord
 	def name
 		given_name+" "+family_name
 	end
-	##
-	has_secure_password
-	##
 	
 	def self.search(search)
 		if search
