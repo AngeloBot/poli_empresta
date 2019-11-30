@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Procurar equipes</h2>
+<%= form_tag teams_path, :method => 'get' do %>
+	<p>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Procurar", :name => nil %>
+	</p>
+<% end %>
+
 <h1>Teams</h1>
 
 <table>
@@ -36,5 +44,5 @@
 
 <%#= link_to 'New Team', new_team_path %>
 <% if current_user.admin? %>
-  <%= link_to 'New Student', new_student_path %>
+  <%= link_to 'New Team', new_team_path %>
 <% end %>
