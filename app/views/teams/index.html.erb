@@ -34,4 +34,7 @@
 
 <br>
 
-<%= link_to 'New Team', new_team_path %>
+<%#= link_to 'New Team', new_team_path %>
+<% if current_user.admin? %>
+  <%= link_to 'New Student', new_student_path %>
+<% end %>
