@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-<<<<<<< Updated upstream
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
@@ -9,10 +8,8 @@ Rails.application.routes.draw do
 
   resources :students
   resources :item_tools
-=======
-  get 'sessions/new'
+  #get 'sessions/new'
 
->>>>>>> Stashed changes
   resources :users
   resources :students
   resources :tools
