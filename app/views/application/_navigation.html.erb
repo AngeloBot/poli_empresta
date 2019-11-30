@@ -2,6 +2,7 @@
 	<%= link_to "Teams", teams_path %> |
 	<%= link_to "Students", students_path %> |
 	<%= link_to "Tools", tools_path %> |
+	<%#= link_to 'New Student', new_student_path %> |
 	<% if current_user %>
 		Logged in as <%= current_user.email %>. |
 		<%= link_to "Log Out", logout_path %>
