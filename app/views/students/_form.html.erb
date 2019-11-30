@@ -36,6 +36,7 @@
     <%#= form.number_field :team_id, id: :student_team_id %>
     <%= form.select:team_id,Team.all.collect{|s|[s.name, s.id]} %>
   </div>
+
   </div>
 
   <div class="actions">
