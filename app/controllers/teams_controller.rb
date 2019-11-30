@@ -2,6 +2,8 @@ class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
   #before_action :authorize, only: [:edit, :update, :destroy]
   before_action :authorize
+  before_action :is_admin, only: [:new, :edit, :update, :destroy]
+  
   # GET /teams
   # GET /teams.json
   def index
