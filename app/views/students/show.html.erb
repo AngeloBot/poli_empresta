@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Admin:</strong>
-  <%= @student.admin %>
+  <strong>Given name:</strong>
+  <%= @student.given_name %>
 </p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @student.name %>
+  <strong>Family name:</strong>
+  <%= @student.family_name %>
 </p>
 
 <p>
@@ -16,18 +16,13 @@
 </p>
 
 <p>
-  <strong>Password digest:</strong>
-  <%= @student.password_digest %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @student.photo %>
+  <strong>Keyword:</strong>
+  <%= @student.keyword %>
 </p>
 
 <p>
   <strong>Team:</strong>
-  <%= @student.team_id %>
+  <%= @student.team.name %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |

@@ -2,14 +2,12 @@
 
 one:
   name: MyString
-  year: 1
-  description: MyText
-  price: 9.99
-  student_id: 1
+  team_id: 1
+  quantity: 1
+  state: MyString
 
 two:
   name: MyString
-  year: 1
-  description: MyText
-  price: 9.99
-  student_id: 1
+  team_id: 1
+  quantity: 1
+  state: MyString
