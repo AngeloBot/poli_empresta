@@ -28,8 +28,6 @@ class StudentsController < ApplicationController
     ##
     if @student.save
       session[:student_id] = @student.id
-    else
-      render "new"
     end
     ##
     respond_to do |format|
@@ -75,6 +73,10 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:given_name, :family_name, :email, :keyword, :team_id)
+      if @student.admin
+        params.require(:student).permit(:given_name, :family_name, :email, :keyword)
+      else
+        params.require(:student).permit(:given_name, :family_name, :email, :keyword, :team_id)
+      end
     end
 end
