@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag(@team.team_avatar_url) %>
+
 <p>
   <strong>Name:</strong>
   <%= @team.name %>
@@ -21,7 +23,7 @@
     <tr>
       <th>Name</th>
       <th>Quantity</th>
-      <th>State</th>        
+      <th>State</th>
     </tr>
   <% @team.tools.each do |tool| %>
     <tr>
@@ -40,7 +42,7 @@
   <table>
     <tr>
       <th>Name</th>
-      <th>Email</th>      
+      <th>Email</th>
     </tr>
   <% @team.students.each do |student| %>
     <tr>
