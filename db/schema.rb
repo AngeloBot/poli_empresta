@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191201000002) do
+ActiveRecord::Schema.define(version: 20191201003855) do
+
 
   create_table "loans", force: :cascade do |t|
     t.integer "borrower_id"
     t.integer "owner_id"
-    t.boolean "accepted"
-    t.boolean "item_returned"
     t.date "start"
     t.date "end"
+    t.boolean "accepted"
+    t.boolean "returned"
+    t.integer "tool_quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
