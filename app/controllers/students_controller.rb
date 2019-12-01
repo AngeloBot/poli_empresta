@@ -26,11 +26,11 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
     ##
-    if @student.save
-      session[:student_id] = @student.id
-    else
-      render "new"
-    end
+    #if @student.save
+    #  session[:student_id] = @student.id
+    #else
+    #  render "new"
+    #end
     ##
     respond_to do |format|
       if @student.save
