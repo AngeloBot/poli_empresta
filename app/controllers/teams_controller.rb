@@ -3,7 +3,7 @@ class TeamsController < ApplicationController
   #before_action :authorize, only: [:edit, :update, :destroy]
   before_action :authorize
   before_action :is_admin, only: [:new, :edit, :update, :destroy]
-  
+
   # GET /teams
   # GET /teams.json
   def index
@@ -72,6 +72,6 @@ class TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:name, :description, :keyword)
+      params.require(:team).permit(:name, :description, :keyword, :team_avatar)
     end
 end

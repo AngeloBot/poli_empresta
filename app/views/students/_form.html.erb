@@ -37,6 +37,9 @@
     <%= form.select:team_id,Team.all.collect{|s|[s.name, s.id]} %>
   </div>
 
+  <div class="field">
+    <%= form.label :avatar %>
+    <%= form.file_field :avatar %>
   </div>
 
   <div class="actions">
