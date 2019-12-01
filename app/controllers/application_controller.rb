@@ -5,16 +5,12 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def current_user
-  	@current_user ||= User.find(session[:user_id]) if session[:user_id]
+  def current_student
+  	@current_student ||= Student.find(session[:student_id]) if session[:student_id]
   end
-  helper_method :current_user
-
+  helper_method :current_student
   def authorize
-  redirect_to login_url, alert: "Not Authorized" if current_user.nil?
-  end
-  def is_admin
-    redirect_to students_path, alert: "Not authorized" if current_user.nil? or !current_user.admin?
+  redirect_to login_url, alert: "Not Authorized" if current_user.nil
   end
 
 end

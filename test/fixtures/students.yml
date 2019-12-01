@@ -4,12 +4,12 @@ one:
   given_name: MyString
   family_name: MyString
   email: MyString
-  keyword: MyString
-  team_id: 1
+  password: MyString
+  password_confirmation: MyString
 
 two:
   given_name: MyString
   family_name: MyString
   email: MyString
-  keyword: MyString
-  team_id: 1
+  password: MyString
+  password_confirmation: MyString

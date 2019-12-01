@@ -1,3 +1,4 @@
+<h1>Sign Up</h1>
 <%= form_with(model: student, local: true) do |form| %>
   <% if student.errors.any? %>
     <div id="error_explanation">
@@ -27,19 +28,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :keyword %>
-    <%= form.text_field :keyword, id: :student_keyword %>
+    <%= form.label :password %>
+    <%= form.text_field :password, id: :student_password %>
   </div>
 
   <div class="field">
-    <%= form.label :team_id %>
-    <%#= form.number_field :team_id, id: :student_team_id %>
-    <%= form.select:team_id,Team.all.collect{|s|[s.name, s.id]} %>
-  </div>
-
-  <div class="field">
-    <%= form.label :avatar %>
-    <%= form.file_field :avatar %>
+    <%= form.label :password_confirmation %>
+    <%= form.text_field :password_confirmation, id: :student_password_confirmation %>
   </div>
 
   <div class="actions">
