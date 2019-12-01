@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191130195736) do
+ActiveRecord::Schema.define(version: 20191201001410) do
+
+  create_table "loans", force: :cascade do |t|
+    t.integer "borrower_id"
+    t.integer "owner_id"
+    t.date "start"
+    t.date "end"
+    t.boolean "accepted"
+    t.boolean "returned"
+    t.integer "tool_quality"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "students", force: :cascade do |t|
     t.string "given_name"

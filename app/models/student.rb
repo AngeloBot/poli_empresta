@@ -12,7 +12,7 @@ class Student < ApplicationRecord
 		else
 			all
 		end
-	
+	end
 	#método pra retornar booleana pra caso o Student é um admin de equipe.
 	def admin
 		admin
