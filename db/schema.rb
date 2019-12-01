@@ -10,59 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191201003855) do
-
-  create_table "loans", force: :cascade do |t|
-    t.integer "borrower_id"
-    t.integer "owner_id"
-    t.date "start"
-    t.date "end"
-    t.boolean "accepted"
-    t.boolean "returned"
-    t.integer "tool_quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20191201154200) do
 
   create_table "students", force: :cascade do |t|
     t.string "given_name"
     t.string "family_name"
     t.string "email"
-    t.string "keyword"
-    t.integer "team_id"
+    t.string "password"
+    t.string "password_confirmation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
-    t.boolean "admin"
-    t.string "image"
-    t.string "avatar"
-  end
-
-  create_table "teams", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "keyword"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "team_avatar"
-  end
-
-  create_table "tools", force: :cascade do |t|
-    t.string "name"
-    t.integer "team_id"
-    t.integer "quantity"
-    t.string "state"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "tool_image"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean "admin", default: false, null: false
   end
 
 end

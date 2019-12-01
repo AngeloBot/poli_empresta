@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag(@student.avatar_url) %>
-
 <p>
   <strong>Given name:</strong>
   <%= @student.given_name %>
@@ -18,13 +16,13 @@
 </p>
 
 <p>
-  <strong>Keyword:</strong>
-  <%= @student.keyword %>
+  <strong>Password:</strong>
+  <%= @student.password %>
 </p>
 
 <p>
-  <strong>Team:</strong>
-  <%= @student.team.name %>
+  <strong>Password confirmation:</strong>
+  <%= @student.password_confirmation %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |

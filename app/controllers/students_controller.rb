@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
   def index
-    @students = Student.search(params[:search])
+    @students = Student.all
   end
 
   # GET /students/1
@@ -25,18 +25,17 @@ class StudentsController < ApplicationController
   # POST /students.json
   def create
     @student = Student.new(student_params)
-    ##
-    if @student.save
-      session[:student_id] = @student.id
-    end
-    ##
+
     respond_to do |format|
       if @student.save
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
+        session[:student_id] = @student.id
+        #redirect_to root_url, notice: "Thank you for signing up!"
       else
         format.html { render :new }
         format.json { render json: @student.errors, status: :unprocessable_entity }
+        #render "new"
       end
     end
   end
@@ -73,6 +72,6 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:given_name, :family_name, :email, :keyword, :team_id, :avatar)
+      params.require(:student).permit(:given_name, :family_name, :email, :password, :password_confirmation)
     end
 end

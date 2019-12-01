@@ -1,13 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Procurar membro</h2>
-<%= form_tag students_path, :method => 'get' do %>
-	<p>
-		<%= text_field_tag :search, params[:search] %>
-		<%= submit_tag "Procurar", :name => nil %>
-	</p>
-<% end %>
-
 <h1>Students</h1>
 
 <table>
@@ -16,8 +8,8 @@
       <th>Given name</th>
       <th>Family name</th>
       <th>Email</th>
-      <th>Keyword</th>
-      <th>Team</th>
+      <th>Password</th>
+      <th>Password confirmation</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,8 +20,8 @@
         <td><%= student.given_name %></td>
         <td><%= student.family_name %></td>
         <td><%= student.email %></td>
-        <td><%= student.keyword %></td>
-        <td><%= student.team.name %></td>
+        <td><%= student.password %></td>
+        <td><%= student.password_confirmation %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
