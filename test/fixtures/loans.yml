@@ -7,7 +7,7 @@ one:
   end: 2019-11-30
   accepted: false
   returned: false
-  tool_quality: 1
+  tool_quantity: 1
 
 two:
   borrower_id: 1
@@ -16,4 +16,4 @@ two:
   end: 2019-11-30
   accepted: false
   returned: false
-  tool_quality: 1
+  tool_quantity: 1
