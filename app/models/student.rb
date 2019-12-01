@@ -1,6 +1,5 @@
 class Student < ApplicationRecord
 	belongs_to :team
-	has_secure_password
 	mount_uploader :avatar, ImageUploader
 
 	def name
@@ -14,8 +13,5 @@ class Student < ApplicationRecord
 			all
 		end
 	end
-	#método pra retornar booleana pra caso o Student é um admin de equipe.
-	def admin
-		admin
-	end
+
 end
