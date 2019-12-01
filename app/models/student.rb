@@ -1,11 +1,12 @@
 class Student < ApplicationRecord
 	belongs_to :team
 	has_secure_password
+	mount_uploader :avatar, ImageUploader
 
 	def name
 		given_name+" "+family_name
 	end
-	
+
 	def self.search(search)
 		if search
 			where("name like ?", "%#{search}")

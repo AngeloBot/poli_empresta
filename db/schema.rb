@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20191201003855) do
 
+
   create_table "loans", force: :cascade do |t|
     t.integer "borrower_id"
     t.integer "owner_id"
@@ -34,6 +35,9 @@ ActiveRecord::Schema.define(version: 20191201003855) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.boolean "admin"
+    t.string "member_avatar"
+    t.string "image"
+    t.string "avatar"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -42,6 +46,7 @@ ActiveRecord::Schema.define(version: 20191201003855) do
     t.string "keyword"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "team_avatar"
   end
 
   create_table "tools", force: :cascade do |t|
@@ -51,6 +56,8 @@ ActiveRecord::Schema.define(version: 20191201003855) do
     t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
+    t.string "tool_image"
   end
 
   create_table "users", force: :cascade do |t|
