@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 #Upload
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 #Processamento de imagem
 gem 'mini_magick'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
